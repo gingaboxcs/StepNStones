@@ -1,0 +1,49 @@
+title: Step N' Stones English Preschool
+description: 保育の無償化の対象園になりました！
+url: "https://stepnstones.jp"
+baseurl: ""
+lang: ja
+
+permalink: /:slug/
+
+collections:
+  news:
+    output: true
+    permalink: /news-ja/:path/
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: news_post
+
+paginate: 6
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - tools
+  - README.md
+  - .netlify
+  - netlify.toml
+
+sass:
+  style: compressed

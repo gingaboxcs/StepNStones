@@ -1,0 +1,100 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "ja"
+
+collections:
+  - name: "news"
+    label: "お知らせ"
+    folder: "_news"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "公開日", name: "date", widget: "datetime" }
+      - { label: "アイキャッチ画像", name: "image", widget: "image", required: false }
+      - { label: "本文", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "固定ページ"
+    files:
+      - file: "_pages/about.html"
+        label: "当園について"
+        name: "about"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/program.html"
+        label: "プログラム"
+        name: "program"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/schedule.html"
+        label: "年間スケジュール"
+        name: "schedule"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/daily-schedule.html"
+        label: "1日のスケジュール"
+        name: "daily-schedule"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/introduction.html"
+        label: "制服・給食・先生紹介"
+        name: "introduction"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/guidance.html"
+        label: "入園案内"
+        name: "guidance"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/users-voice.html"
+        label: "保護者の声"
+        name: "users-voice"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/cambridge.html"
+        label: "ケンブリッジ児童英検"
+        name: "cambridge"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/after-program.html"
+        label: "放課後教育プログラム"
+        name: "after-program"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "_pages/contact.html"
+        label: "お問い合わせ"
+        name: "contact"
+        fields:
+          - { label: "ページタイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "サイト設定"
+    files:
+      - file: "_data/site.yml"
+        label: "サイト全体"
+        name: "site"
+        fields:
+          - { label: "サイト名", name: "title", widget: "string" }
+          - { label: "キャッチコピー", name: "tagline", widget: "string" }
+          - { label: "電話番号", name: "phone", widget: "string", required: false }
+          - { label: "住所", name: "address", widget: "text", required: false }
+          - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }

@@ -1,0 +1,25 @@
+---
+layout: page
+title: "お知らせ"
+permalink: /category/news-ja/
+---
+<div class="l-content l-container" id="content">
+  <main class="l-mainContent l-article" id="main_content">
+    <div class="l-mainContent__inner">
+      <h1 class="c-pageTitle">お知らせ</h1>
+      <ul class="p-postList -type-card -col-pc-3 -col-tab-2 -col-sp-1">
+        {% assign posts = site.news | sort: "date" | reverse %}
+        {% for post in posts %}
+        <li class="p-postList__item">
+          <a class="p-postList__link" href="{{ post.url }}">
+            <div class="p-postList__body">
+              <h2 class="p-postList__title">{{ post.title }}</h2>
+              <time class="p-postList__date u-thin" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y/%-m/%-d' }}</time>
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </main>
+</div>
