@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: gingaboxcs/StepNStones
   branch: main
 
 # Enables `npx decap-server` for editing locally without deploying.
