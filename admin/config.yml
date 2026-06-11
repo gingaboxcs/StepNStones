@@ -2,89 +2,131 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+# Enables `npx decap-server` for editing locally without deploying.
+# Has no effect in production (only activates on localhost).
+local_backend: true
+
+media_folder: "wp-content/uploads/cms"
+public_folder: "/wp-content/uploads/cms"
 
 locale: "ja"
 
 collections:
+  # ---------------------------------------------------------------------------
+  # News posts — rich-text WYSIWYG editor (markdown widget).
+  # extension/format match the existing 265 .html posts so they all appear.
+  # Hidden fields preserve frontmatter Decap would otherwise strip on save.
+  # ---------------------------------------------------------------------------
   - name: "news"
     label: "お知らせ"
+    label_singular: "お知らせ"
     folder: "_news"
     create: true
     slug: "{{slug}}"
-    extension: md
-    format: frontmatter
+    extension: "md"
+    format: "frontmatter"
+    sort: "date:desc"
     fields:
       - { label: "タイトル", name: "title", widget: "string" }
-      - { label: "公開日", name: "date", widget: "datetime" }
-      - { label: "アイキャッチ画像", name: "image", widget: "image", required: false }
+      - { label: "公開日", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "news_post" }
+      - { label: "Post ID", name: "post_id", widget: "hidden", required: false }
       - { label: "本文", name: "body", widget: "markdown" }
 
+  # ---------------------------------------------------------------------------
+  # Fixed pages — these are hand-tuned SWELL/WordPress HTML, so the body uses a
+  # plain-text (raw HTML) editor. A WYSIWYG editor would reformat/break the
+  # markup. Hidden layout/permalink fields keep critical frontmatter intact.
+  # ---------------------------------------------------------------------------
   - name: "pages"
     label: "固定ページ"
+    editor:
+      preview: false
     files:
       - file: "_pages/about.html"
         label: "当園について"
         name: "about"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/program.html"
         label: "プログラム"
         name: "program"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/schedule.html"
         label: "年間スケジュール"
         name: "schedule"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/daily-schedule.html"
         label: "1日のスケジュール"
         name: "daily-schedule"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/introduction.html"
         label: "制服・給食・先生紹介"
         name: "introduction"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/guidance.html"
         label: "入園案内"
         name: "guidance"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/users-voice.html"
         label: "保護者の声"
         name: "users-voice"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/cambridge.html"
         label: "ケンブリッジ児童英検"
         name: "cambridge"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/after-program.html"
         label: "放課後教育プログラム"
         name: "after-program"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/contact.html"
         label: "お問い合わせ"
         name: "contact"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+          - { label: "本文 (HTML)", name: "body", widget: "text" }
 
+  # ---------------------------------------------------------------------------
+  # Site-wide settings (_data/site.yml)
+  # ---------------------------------------------------------------------------
   - name: "settings"
     label: "サイト設定"
     files:
