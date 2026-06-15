@@ -76,14 +76,6 @@ collections:
           - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
           - { label: "Permalink", name: "permalink", widget: "hidden" }
           - { label: "本文 (HTML)", name: "body", widget: "text" }
-      - file: "_pages/introduction.html"
-        label: "制服・給食・先生紹介"
-        name: "introduction"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/guidance.html"
         label: "入園案内"
         name: "guidance"
@@ -137,6 +129,42 @@ collections:
         fields:
           - { label: "メイン写真（PC）/ Main photo (desktop)", name: "main_image", widget: "image" }
           - { label: "メイン写真（スマホ）/ Main photo (mobile)", name: "main_image_sp", widget: "image" }
+
+  # ---------------------------------------------------------------------------
+  # Teachers (先生紹介) — edits _data/teachers.yml. Layout is fixed in the
+  # template; editors only change name/photo/text and can drag to reorder.
+  # ---------------------------------------------------------------------------
+  - name: "teachers"
+    label: "先生紹介 / Teachers"
+    files:
+      - file: "_data/teachers.yml"
+        label: "先生紹介 / Teachers"
+        name: "teachers"
+        fields:
+          - label: "先生 / Teachers"
+            name: "teachers"
+            widget: "list"
+            label_singular: "先生 / Teacher"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "名前 / Name", name: "name", widget: "string" }
+              - { label: "写真 / Photo", name: "photo", widget: "image" }
+              - label: "セクション / Section"
+                name: "group"
+                widget: "select"
+                options:
+                  - { label: "プリスクール担当 / Preschool", value: "preschool" }
+                  - { label: "小学生放課後プログラム担当 / After-school", value: "afterschool" }
+                default: "preschool"
+              - { label: "大きく上に表示 / Featured (centered at top)", name: "featured", widget: "boolean", default: false }
+              - label: "内容 / Content"
+                name: "sections"
+                widget: "list"
+                label_singular: "項目 / Item"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "見出し / Label（例: 経歴, 趣味, ひとこと）", name: "label", widget: "string", required: false }
+                  - { label: "本文 / Text", name: "body", widget: "text" }
 
   # ---------------------------------------------------------------------------
   # Site-wide settings (_data/site.yml)

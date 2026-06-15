@@ -1,0 +1,165 @@
+teachers:
+- name: Robert Teacher
+  photo: /wp-content/uploads/2023/09/introduction_teacher09@2x.png
+  group: preschool
+  featured: true
+  sections:
+  - label: ''
+    body: 'アメリカ イリノイ州
+
+      ビントン出身'
+  - label: ''
+    body: ステッピングストーンズでは、保護者の方、お子様の両方に言語、精神、およびマインドの強力な基盤を築くことのできる場所を提供するよう努めています。お会いしてお話しすることを楽しみにしています。
+- name: Joy Teacher
+  photo: /wp-content/uploads/2026/01/joy.jpg
+  group: preschool
+  featured: false
+  sections:
+  - label: 出身
+    body: フィリピン出身です。
+  - label: 日本
+    body: 日本に来て7年になります。岡山で3年間過ごし、2023年に出雲に引っ越してきました。
+  - label: 経歴
+    body: 2023年からStep N’ Stones English Preschoolに勤務し、子育て支援員の資格を取得しました。またケンブリッジ英語検定（YLE）の試験官としての研修を受けています。
+  - label: 趣味
+    body: アウトドアを楽しんだり、フィリピン料理を作ったり、Netflixでドキュメンタリーを見ることが好きです。
+  - label: ひとこと
+    body: 子どもたちが英語を好きになれるように、そして自信をもってのびのびと自分を表現できるようにお手伝いしたいと思っています。
+- name: Grace Teacher
+  photo: /wp-content/uploads/2026/01/grace.jpg
+  group: preschool
+  featured: false
+  sections:
+  - label: 出身
+    body: フィリピンの首都メトロマニラ出身です。
+  - label: 日本
+    body: 2023年7月から日本に住んでいます。
+  - label: 経歴
+    body: 2010年に教育学の学士号を取得しました。それ以来、フィリピン、シンガポール、そして現在は日本の学校で教えてきました。最近では、ケンブリッジ英語検定のPre-A1、A1、A2、B1レベルのスピーキング試験官の資格を取得しました。
+  - label: 趣味
+    body: 休日は工作をしたり、カフェに行ったり、ゲームをすることを楽しんでいます。
+  - label: ひとこと
+    body: 子どもたちが楽しく学びながら英語を好きになれるようサポートすることが目標です。一緒に楽しく学びましょう！
+- name: Shania Teacher
+  photo: /wp-content/uploads/2026/01/shania.jpg
+  group: preschool
+  featured: false
+  sections:
+  - label: 出身
+    body: インドのムンバイ出身で、出雲に来るまではシンガポールに10年以上住んでいました。
+  - label: 日本
+    body: 2026年1月から日本に住んでいます。
+  - label: 経歴
+    body: 大学では幼児教育を学び学士号を取得しました。シンガポールで3年間、幼稚園の子どもたちを教えた経験があります。また、日本の東京でインターンシップも行いました。
+  - label: 趣味
+    body: 日本語を学ぶこと、旅行と写真を撮ることが好きです。
+  - label: ひとこと
+    body: 学ぶことが楽しく意味のあるものになるよう心がけています。子どもたちが新しいことに挑戦しながら自信や粘り強さを育み、「いつも自分のベストを尽くす」姿勢を身につけられるようサポートしていきたいと考えています。また、思いやりやチームワークの大切さも一緒に育てていきたいです。
+- name: Eri Teacher
+  photo: /wp-content/uploads/2023/09/introduction_teacher07@2x.png
+  group: preschool
+  featured: false
+  sections:
+  - label: 出身
+    body: 出雲市出身です。
+  - label: 海外在住歴
+    body: ニュージーランドに1年滞在していました。
+  - label: 経歴
+    body: 日本の幼稚園や保育園で勤務しました。ニュージーランドではシーズナルジョブや保育園でボランティアの経験をしました。EBS国際教育センターでASEPの担当をし、Step N’ Stones English Preschoolで保育士として勤務しています。
+  - label: 趣味
+    body: ドラムの演奏をするのが楽しく、バンドを組んでいました。また、おしゃれなカフェに行ったり、旅行に行ったりするのも好きです。
+  - label: ひとこと
+    body: 私は地元の子どもたちに英語を学ぶ機会を提供することに強い思いを持っています。私の目標は、子どもたちが問題解決能力を身につけ、自立した人へと成長できる環境をつくることです。日本や海外での幼児教育の経験を通して、子どもたちが自信と好奇心、そして主体性を持って学べるようサポートしていきたいと考えています。
+- name: Shoko Teacher
+  photo: /wp-content/uploads/2026/01/shoko.jpg
+  group: preschool
+  featured: false
+  sections:
+  - label: 出身
+    body: 出雲市出身です。
+  - label: 海外在住歴
+    body: 大学時代にアメリカのケンタッキー州へ1年間留学しました。その後、アメリカのハワイで6年間暮らしました。
+  - label: 経歴
+    body: 大学で英語学の学士号を取得し、航空会社で7年間予約担当として勤務しました。その後ハワイへ移住し、ホテルの予約部門で1年間、さらにコーヒーショップでバリスタとして1年間働きました。子どもが生まれた後、2021年に地元の出雲へ戻りました。2023年からStep N’ Stones English Preschoolで2歳児から5歳児の子どもたちに英語を教えており、今年で4年目になります。また、YLEの指導トレーニングを受けており、英語資格はB1レベルを取得しています。
+  - label: 趣味
+    body: 休日は子どもたちと外で遊んだり、クラフトを作ったり一緒に楽しい時間を過ごすことが好きです。また、音楽も大好きで、ピアノを弾いたり歌を歌ったりしています。料理や美味しいものを食べることも好きで、毎日の楽しみのひとつです。
+  - label: ひとこと
+    body: 私は、子どもたちや保護者の皆さまが安心して過ごせる、あたたかい環境づくりを大切にしています。そして、英語やさまざまな文化に触れることを「楽しい」と感じてもらえるように心がけています。また、子どもたちがいろいろなことに前向きに取り組み、最後まであきらめずにチャレンジできる気持ちを育てながら、小さな成功を積み重ねて「できた！」という達成感を一緒に感じられるようにサポートしていきたいと思っています。
+- name: Fuka Teacher
+  photo: /wp-content/uploads/2024/04/Fuka-Teacher-1.png
+  group: preschool
+  featured: false
+  sections:
+  - label: 出身
+    body: 出雲市出身です。
+  - label: 海外在住歴
+    body: 英語を勉強するためにマルタに行きました。
+  - label: 経歴
+    body: 幼稚園や保育園で先生として勤務していました。留学後、英語を身につけてStep N’ Stones English Preschoolの保育士として勤務しています。
+  - label: 趣味
+    body: 韓国の食べ物や音楽が好きです。
+  - label: ひとこと
+    body: 子どもたち一人ひとりが自分自身を大好きになり、互いの違いや個性を認め合えるような関わりを大切にしています。また、英語が子どもたちの世界を広げるきっかけの一つとなり、楽しみながら新しい価値観に触れられるような時間を一緒に過ごしていきたいと思っています。
+- name: Natsumi Teacher
+  photo: /wp-content/uploads/2026/01/natsumi.jpg
+  group: preschool
+  featured: false
+  sections:
+  - label: 出身
+    body: 出雲市出身です。
+  - label: 海外在住歴
+    body: カナダに1年半滞在していました。
+  - label: 経歴
+    body: 短期大学卒業後、市内の保育園に2年間勤務しました。その後カナダへ渡航し、現地の保育施設で勤務しました。帰国後は埼玉県のプリスクールに4年間勤務し、その後島根へ戻り、EBS国際文化教育センターでの勤務を経て、Step N’ Stones English Preschoolには開設当初より勤務しております。
+  - label: 趣味
+    body: 休日は家族と車で車中泊の旅やキャンプを楽しんでいます。各地の美味しい食べ物や美しい自然を見つけることが好きです。
+  - label: ひとこと
+    body: 子どもたちが楽しく遊び、学ぶ中で自然に英語に親しみ、力を身につけていけるような関わりを大切にしています。また、思いやりの気持ちや、新しいことに挑戦する心、そして困難なときにもあきらめずに取り組む力を育めるよう、一人ひとりに寄り添った保育を心がけています。また、保護者の皆さまにも安心してお子さまをお預けいただけるよう、安心・安全な環境づくりにも努めてまいります。
+- name: Mat Teacher
+  photo: /wp-content/uploads/2026/01/mat.webp
+  group: afterschool
+  featured: false
+  sections:
+  - label: 出身
+    body: シカゴ（イリノイ州）、アメリカ出身です。
+  - label: 経歴
+    body: 大学で言語学とTESOL（英語教授法）の修士号を取得後、すぐに来日しました。大学在学中は教授の助手として日本語クラスを補助していました。これまでに日本には３回来て、秋田に１カ月ホームステイしたこともありますが、出雲は初めてです。
+  - label: 趣味
+    body: 観光や美味しいものを食べることが好きです。出雲近辺でお勧めの観光地があったら教えてください。ロッククライミングや美術館に行くことも好きです。
+  - label: ひとこと
+    body: 皆さんと知り合いになれることを楽しみにしています。英語を楽しく学びましょう！
+- name: Joy Teacher
+  photo: /wp-content/uploads/2026/01/joy.jpg
+  group: afterschool
+  featured: false
+  sections:
+  - label: 出身
+    body: フィリピン出身です。
+  - label: 日本
+    body: 日本に来て7年になります。岡山で3年間過ごし、2023年に出雲に引っ越してきました。
+  - label: 経歴
+    body: 2023年からStep N’ Stones English Preschoolに勤務し、子育て支援員の資格を取得しました。またケンブリッジ英語検定（YLE）の試験官としての研修を受けています。
+  - label: 趣味
+    body: アウトドアを楽しんだり、フィリピン料理を作ったり、Netflixでドキュメンタリーを見ることが好きです。
+  - label: ひとこと
+    body: 子どもたちが英語を好きになれるように、そして自信をもってのびのびと自分を表現できるようにお手伝いしたいと思っています。
+- name: Shyan Teacher
+  photo: /wp-content/uploads/2025/03/446ca222d682c43a4a87e50229563d7f.jpg
+  group: afterschool
+  featured: false
+  sections:
+  - label: ''
+    body: 教室は、生徒が大切にされていると感じ、失敗を恐れずに新しいアイデアを探求する力を与えられる場所であるべきです。尊敬、励ましの文化を育むことで、私はすべての生徒が学業面、社会面、精神面で成長できるような雰囲気を作ることを目指します。
+- name: David Teacher
+  photo: /wp-content/uploads/2023/09/introduction_teacher04@2x.png
+  group: afterschool
+  featured: false
+  sections:
+  - label: ''
+    body: 'アメリカ カリフォルニア州
+
+      サンタマリア出身'
+  - label: ''
+    body: '英語が上手になるということは、失敗から学ぶということです。間違えることもあるかもしれないけど、英語のスピーカーも同じことがありますよ。
+
+      常にトライしましょう！'

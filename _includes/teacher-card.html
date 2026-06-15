@@ -1,0 +1,13 @@
+{%- comment -%}
+Renders one teacher card from a data entry. Usage:
+  {% include teacher-card.html t=teacher %}
+Layout/markup is fixed here; editors only change the data in _data/teachers.yml.
+{%- endcomment -%}
+{%- assign t = include.t -%}
+{%- capture name_html -%}<p class="has-text-align-center u-mb-ctrl u-mb-0 has-swl-pale-04-color has-text-color has-huge-font-size"><span class="swl-fz u-fz-l">{{ t.name }}</span></p>{%- endcapture -%}
+{%- capture sections_html -%}{%- for sec in t.sections -%}{%- if sec.label and sec.label != "" -%}<p class="has-text-align-left"><strong>{{ sec.label }}</strong><br/>{{ sec.body | strip | newline_to_br }}</p>{%- else -%}<p class="has-text-align-center">{{ sec.body | strip | newline_to_br }}</p>{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- if t.featured -%}
+<div class="u-mb-ctrl u-mb-50" style="max-width:320px;margin-left:auto;margin-right:auto"><div class="swell-block-column swl-has-mb--s"><figure class="wp-block-image size-full u-mb-ctrl u-mb-0 size_xs is-style-rounded"><img alt="{{ t.name }}" decoding="async" loading="lazy" src="{{ t.photo }}"/></figure><div class="swell-block-columns"><div class="swell-block-columns__inner"><div class="swell-block-column swl-has-mb--s" style="--clmn-w--pc:100%;--swl-clmn-pddng:0px 1rem 0px 1rem">{{ name_html }}{{ sections_html }}</div></div></div><div class="swell-block-columns pc_only"><div class="swell-block-columns__inner"><div class="swell-block-column swl-has-mb--s"><div aria-hidden="true" class="wp-block-spacer" style="height:2rem"></div></div></div></div></div></div>
+{%- else -%}
+<div class="swell-block-column swl-has-mb--s"><figure class="wp-block-image size-full u-mb-ctrl u-mb-0 size_xs is-style-rounded"><img alt="{{ t.name }}" decoding="async" loading="lazy" src="{{ t.photo }}"/></figure><div class="swell-block-columns"><div class="swell-block-columns__inner"><div class="swell-block-column swl-has-mb--s" style="--clmn-w--pc:15%"></div><div class="swell-block-column swl-has-mb--s" style="--clmn-w--pc:70%;--swl-clmn-pddng:0px 1rem 0px 1rem">{{ name_html }}{{ sections_html }}</div><div class="swell-block-column swl-has-mb--s" style="--clmn-w--pc:15%"></div></div></div><div class="swell-block-columns pc_only"><div class="swell-block-columns__inner"><div class="swell-block-column swl-has-mb--s"><div aria-hidden="true" class="wp-block-spacer" style="height:2rem"></div></div></div></div></div>
+{%- endif -%}
