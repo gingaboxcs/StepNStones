@@ -131,6 +131,34 @@ collections:
           - { label: "メイン写真（スマホ）/ Main photo (mobile)", name: "main_image_sp", widget: "image" }
 
   # ---------------------------------------------------------------------------
+  # Page content — per-page text & images live in _data/pages/*.yml. Layout is
+  # fixed in the templates; editors only change words and pictures.
+  # ---------------------------------------------------------------------------
+  - name: "page_content"
+    label: "ページ内容 / Page content"
+    files:
+      - file: "_data/pages/introduction.yml"
+        label: "制服・給食 / Uniform & Lunch"
+        name: "introduction_extras"
+        fields:
+          - label: "制服 / Uniform"
+            name: "uniform"
+            widget: "object"
+            fields:
+              - { label: "見出し / Heading", name: "heading", widget: "string" }
+              - { label: "案内文 / Intro", name: "intro", widget: "markdown" }
+              - { label: "補足 / Note", name: "note", widget: "text" }
+              - { label: "写真1 / Image 1", name: "image1", widget: "image" }
+              - { label: "写真2 / Image 2", name: "image2", widget: "image" }
+          - label: "給食 / Lunch"
+            name: "lunch"
+            widget: "object"
+            fields:
+              - { label: "見出し / Heading", name: "heading", widget: "string" }
+              - { label: "本文 / Text", name: "text", widget: "text" }
+              - { label: "写真 / Image", name: "image", widget: "image" }
+
+  # ---------------------------------------------------------------------------
   # Teachers (先生紹介) — edits _data/teachers.yml. Layout is fixed in the
   # template; editors only change name/photo/text and can drag to reorder.
   # ---------------------------------------------------------------------------

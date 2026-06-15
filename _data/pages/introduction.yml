@@ -1,0 +1,18 @@
+uniform:
+  heading: 制服
+  intro: |
+    当園の制服はオンラインストア [https://www.schooluniform.jp/](https://www.schooluniform.jp/) を通して簡単にオーダーしていただけます。
+
+    トップページの“SHOP BY SCHOOL”をクリックしてください。
+
+    次の画面に “ＳＳＥ”のロゴがありますので、そちらをクリックしてください。
+  note: 必要なもの、サイズを選び会計をしてください。商品は直接ご自宅へ配送されます。
+  image1: /wp-content/uploads/2024/05/324b9f25bac6b2076b1f8205fbcd73a2-1024x915.png
+  image2: /wp-content/uploads/2024/05/2f285e595b97eb5c577ee19a9b7c0a20-1024x915.png
+lunch:
+  heading: 給食
+  text: |
+    給食はお子様の成長にはかかせません。
+    健康な体を作るにはよく食べ、運動し、眠ることが大切です。
+    当園では“健康弁当まつした”の給食を提供します。健康とお子様の幸せな成長に合わせてメニューを考案しています。また、通常の給食の他に、季節のイベントに合わせた特別メニューも計画中です
+  image: /wp-content/uploads/2024/05/9bfb008825ec70eaab306bafad5b7d97-1-1024x488.png
