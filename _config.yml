@@ -3,6 +3,10 @@ description: 保育の無償化の対象園になりました！
 url: "https://stepnstones.jp"
 baseurl: ""
 lang: ja
+timezone: Asia/Tokyo
+# Always publish posts even if their timestamp is slightly ahead of the build
+# clock (Netlify builds in UTC). Without this, a post dated "now" can 404.
+future: true
 
 permalink: /:slug/
 
@@ -44,6 +48,7 @@ exclude:
   - README.md
   - .netlify
   - netlify.toml
+  - docs
 
 sass:
   style: compressed
