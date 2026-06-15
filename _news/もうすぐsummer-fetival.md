@@ -1,5 +1,5 @@
 ---
-title: もうすぐSummer Fetival!!
+title: もうすぐSummer Festival!!
 date: 2026-06-15T10:22:00
 layout: news_post
 ---
