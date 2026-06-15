@@ -12,6 +12,9 @@ public_folder: "/wp-content/uploads/cms"
 
 locale: "ja"
 
+# Logo shown on the CMS login screen (the site's brand logo)
+logo_url: "/wp-content/uploads/2023/09/stepnstones-orignal-gradient%E5%85%A8%E4%BD%93-1.png"
+
 collections:
   # ---------------------------------------------------------------------------
   # News posts — rich-text WYSIWYG editor (markdown widget).
@@ -35,41 +38,6 @@ collections:
       - { label: "本文", name: "body", widget: "markdown" }
 
   # ---------------------------------------------------------------------------
-  # Fixed pages — these are hand-tuned SWELL/WordPress HTML, so the body uses a
-  # plain-text (raw HTML) editor. A WYSIWYG editor would reformat/break the
-  # markup. Hidden layout/permalink fields keep critical frontmatter intact.
-  # ---------------------------------------------------------------------------
-  - name: "pages"
-    label: "固定ページ"
-    editor:
-      preview: false
-    files:
-      - file: "_pages/guidance.html"
-        label: "入園案内"
-        name: "guidance"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
-      - file: "_pages/cambridge.html"
-        label: "ケンブリッジ児童英検"
-        name: "cambridge"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
-      - file: "_pages/after-program.html"
-        label: "放課後教育プログラム"
-        name: "after-program"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
-
-  # ---------------------------------------------------------------------------
   # Home page — editable images live in _data/home.yml (no HTML to break)
   # ---------------------------------------------------------------------------
   - name: "home"
@@ -81,6 +49,14 @@ collections:
         fields:
           - { label: "メイン写真（PC）/ Main photo (desktop)", name: "main_image", widget: "image" }
           - { label: "メイン写真（スマホ）/ Main photo (mobile)", name: "main_image_sp", widget: "image" }
+          - { label: "特長1 / Feature 1", name: "feature1", widget: "text" }
+          - { label: "特長2 / Feature 2", name: "feature2", widget: "text" }
+          - { label: "制服・給食 紹介文 / Uniform & lunch blurb", name: "introduction_blurb", widget: "text" }
+          - { label: "ケンブリッジ 紹介文 / Cambridge blurb", name: "cambridge_blurb", widget: "text" }
+          - { label: "放課後 紹介文 / After-school blurb", name: "afterschool_blurb", widget: "text" }
+          - { label: "補助金額（数字）/ Subsidy amount", name: "subsidy_amount", widget: "string" }
+          - { label: "お問い合わせ 案内文 / Contact CTA", name: "contact_cta", widget: "text" }
+          - { label: "保護者の声 / Testimonials", name: "testimonials", widget: "list" }
 
   # ---------------------------------------------------------------------------
   # Page content — per-page text & images live in _data/pages/*.yml. Layout is
@@ -234,6 +210,55 @@ collections:
                       - { label: "グレー / Gray", value: "gray" }
                       - { label: "黄 / Yellow", value: "yellow" }
                   - { label: "アバター / Avatar (任意)", name: "avatar", widget: "image", required: false }
+      - file: "_data/pages/after-program.yml"
+        label: "放課後教育プログラム / After-school"
+        name: "after_program"
+        fields:
+          - label: "イントロ / Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "動画 / Video", name: "video", widget: "file" }
+              - { label: "概要 / Overview", name: "overview", widget: "text" }
+              - { label: "詳細 / Details", name: "details", widget: "text" }
+          - label: "クラス / Classes"
+            name: "classes"
+            widget: "list"
+            label_singular: "クラス / Class"
+            summary: "{{fields.number}}. {{fields.title}}"
+            fields:
+              - { label: "番号 / Number", name: "number", widget: "string" }
+              - { label: "タイトル / Title", name: "title", widget: "string" }
+              - { label: "説明 / Description", name: "text", widget: "text" }
+              - { label: "イラスト / Image", name: "image", widget: "image" }
+          - label: "時間割 / Timetable"
+            name: "timetable"
+            widget: "object"
+            fields:
+              - { label: "曜日 / Days", name: "days", widget: "list" }
+              - label: "行 / Rows"
+                name: "rows"
+                widget: "list"
+                label_singular: "行 / Row"
+                summary: "{{fields.time}}"
+                fields:
+                  - { label: "時間 / Time", name: "time", widget: "string" }
+                  - label: "コマ / Cells"
+                    name: "cells"
+                    widget: "list"
+                    fields:
+                      - { label: "英 / EN", name: "en", widget: "string" }
+                      - { label: "和 / JP", name: "jp", widget: "string" }
+              - { label: "注記 / Caption", name: "caption", widget: "text" }
+          - label: "イベント / Events"
+            name: "events"
+            widget: "list"
+            label_singular: "イベント / Event"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "見出し / Heading", name: "heading", widget: "string" }
+              - { label: "写真 / Image", name: "image", widget: "image" }
+              - { label: "本文 / Text", name: "text", widget: "text" }
       - file: "_data/pages/introduction.yml"
         label: "制服・給食 / Uniform & Lunch"
         name: "introduction_extras"
@@ -254,6 +279,74 @@ collections:
               - { label: "見出し / Heading", name: "heading", widget: "string" }
               - { label: "本文 / Text", name: "text", widget: "text" }
               - { label: "写真 / Image", name: "image", widget: "image" }
+
+      - file: "_data/pages/cambridge.yml"
+        label: "ケンブリッジ児童英検 / Cambridge"
+        name: "cambridge"
+        fields:
+          - label: "イントロ / Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "見出し / Heading", name: "heading", widget: "string" }
+              - { label: "写真 / Photo", name: "photo", widget: "image" }
+              - { label: "本文 / Body", name: "body", widget: "markdown" }
+          - label: "Q&A"
+            name: "qa"
+            widget: "list"
+            label_singular: "Q&A"
+            summary: "{{fields.question}}"
+            fields:
+              - { label: "質問 / Question", name: "question", widget: "string" }
+              - { label: "回答 / Answer", name: "answer", widget: "markdown" }
+              - label: "色 / Color"
+                name: "color"
+                widget: "select"
+                default: "blue"
+                options:
+                  - { label: "青 / Blue", value: "blue" }
+                  - { label: "黄 / Amber", value: "amber" }
+                  - { label: "紫 / Purple", value: "purple" }
+                  - { label: "桃 / Pink", value: "pink" }
+                  - { label: "緑 / Green", value: "green" }
+      - file: "_data/pages/guidance.yml"
+        label: "入園案内 / Guidance"
+        name: "guidance"
+        fields:
+          - { label: "募集定員 見出し / Capacity heading", name: "capacity_heading", widget: "string" }
+          - label: "募集定員 / Capacity"
+            name: "capacity"
+            widget: "list"
+            label_singular: "クラス / Class"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "クラス / Label", name: "label", widget: "text" }
+              - { label: "定員 / Count", name: "count", widget: "string" }
+          - { label: "入園の流れ / Admission flow (steps)", name: "flow", widget: "list" }
+          - { label: "ご案内文 / Call-to-action", name: "cta", widget: "text" }
+          - label: "よくある質問 / FAQ"
+            name: "faq"
+            widget: "list"
+            label_singular: "Q&A"
+            summary: "{{fields.question}}"
+            fields:
+              - { label: "質問 / Question", name: "question", widget: "string" }
+              - { label: "回答 / Answer", name: "answer", widget: "markdown" }
+              - { label: "色 / Color (hex)", name: "color", widget: "string", default: "#ffae00" }
+          - label: "資料 / Documents"
+            name: "documents"
+            widget: "list"
+            label_singular: "資料 / Document"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "ラベル / Label", name: "label", widget: "string" }
+              - label: "リンク / Links"
+                name: "links"
+                widget: "list"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "表示名 / Text", name: "text", widget: "string" }
+                  - { label: "PDF", name: "file", widget: "file" }
 
   # ---------------------------------------------------------------------------
   # Teachers (先生紹介) — edits _data/teachers.yml. Layout is fixed in the
