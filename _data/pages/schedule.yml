@@ -1,0 +1,38 @@
+months:
+  - month: "3"
+    image: /wp-content/uploads/2023/12/c4767bc3ad5c6812a8ea302e6126d988.png
+    events: [ひなまつり, さよなら遠足, 卒業式]
+  - month: "4"
+    image: /wp-content/uploads/2024/05/79f54169f994518145bf13abb0a81b29.png
+    events: [新学期スタート]
+  - month: "5"
+    image: /wp-content/uploads/2024/05/5b37da7fb9d6ae7ce33b5ea168fa6567.png
+    events: [春の遠足, 内科検診, こどもの日のお祝い]
+  - month: "6"
+    image: /wp-content/uploads/2023/12/ff56b95e0a2b100c6df80752683f5c14.png
+    events: [参観日, 保護者面談, 歯科検診]
+  - month: "7"
+    image: /wp-content/uploads/2023/12/a72712a66c7da3c462b4ea7ee679d527.png
+    events: [七夕, サマーフェスティバル]
+  - month: "8"
+    image: /wp-content/uploads/2024/05/848b2d57eea35401b11165ecafaa17b5.png
+    events: ["Summer camp（年長児のみ予定）"]
+  - month: "9"
+    image: /wp-content/uploads/2023/12/3501a8557cbd4d82185d8dd9a184c33c.png
+    events: [祖父母Zoom参観, お月見会, 運動会]
+  - month: "10"
+    image: /wp-content/uploads/2023/12/4bdb3f1cb84a6127eb9585dc3c2c07c6.png
+    events: [ハロウィンパーティー, 内科検診]
+  - month: "11"
+    image: /wp-content/uploads/2023/12/e97a89493e9c79252c16f1ffc856b2d4.png
+    events: [参観日, 保護者面談, 秋の遠足]
+  - month: "12"
+    image: /wp-content/uploads/2023/12/757846a6c3767d29c6433189fd945931.png
+    events: [クリスマス発表会, クリスマスパーティー]
+  - month: "1"
+    image: /wp-content/uploads/2023/12/37a00553a7cddfd4916092260cb2abfb.png
+    events: [お正月, かるた大会, 雪遊び]
+  - month: "2"
+    image: /wp-content/uploads/2023/12/b7676e932e75781456ee73320b552c9e.png
+    events: [節分, バレンタイン, アイススケート]
+footnote: ＊毎月身体測定・避難訓練・誕生日会を行います

@@ -1,0 +1,44 @@
+greeting:
+  image: /wp-content/uploads/2023/09/about_greeting04@2x.png
+  text1: |-
+    ステッピングストーンズは、島根県内で初めて英語保育を提供するために保育施設として県に届出を提出し、『認可外保育施設指導監督基準』を満たす施設として認定された保育園です。
+    文部科学省によって行われた教育改変により新しくお子様に要求されるようになった教育要素を支援するために開園しました。優秀な教師全員が協力して、生徒が英語と日本語、西洋と日本の文化、精神とマインドの両方で成長できるように支援します。若い学習者は新しいものを非常に簡単に受け入れることができるので、言語と思考の強力な基盤を築く絶好の機会となるでしょう。
+  text2: 私たちにとって地元のコミュニティと協力し、支援することも重要である一方、保護者の方の希望とニーズをサポートすることも重要です。お会いしてお話しすることを楽しみにしています。
+  signature: 代表　ロバート・シヴィキング
+philosophy:
+  image1: /wp-content/uploads/2023/09/aboutus_07@2x-1.png
+  image2: /wp-content/uploads/2023/12/43ce9faaf0090f64223543462a4a97af-1024x909.png
+  intro: |-
+    子どもたちは英語と日本語の両方の言語を使って遊び、学び、そして様々なものを創造しながら成長することができます。
+    私たちのゴールは、将来子ども達1人1人がどんな目標に向かって進んでも、諦めずその夢を達成するための強い基盤を作っていくことです。
+  point1_image: /wp-content/uploads/2023/10/point-img1@2x.png
+  point1_text: 当校の教育プログラムは、言語・コミュニケーション、遊びを通じた学び、音楽、体育と健康など、様々な方法に焦点を当てています。子供たちは楽しみながら、総合的なスキルや知識を身につけます。
+  point2_image: /wp-content/uploads/2023/12/d8da6094e343969fc804236fce0e09e0.png
+  point2_text: 当園では、一年を通じて楽しいイベントと年間行事を開催しております。遠足やクリスマスパーティーなど、子供たちが楽しい思い出をつくり、友達と共に当園での特別な瞬間を一緒に楽しみましょう。
+facility:
+  building:
+    heading: 園舎
+    text: 当園舎はカラフルで明るく広々とした教室、自然光がたっぷり差し込む窓、そして快適な学習空間が特徴です。安全で温かな環境で、子供たちが知識を得るだけでなく、社会的なスキルも発展させる場として最適です。ぜひ一度、ご見学にお越しください。
+    image: /wp-content/uploads/2023/09/about_facilityintroduction03@2x-1024x1008.png
+  hall:
+    heading: ホール
+    text: 全学年で行う活動や、ペイント、ランチ、プレイタイムは、大きな窓から太陽の陽射しが差し込む明るいホールで行います。
+    image: /wp-content/uploads/2023/09/アセット-67@2x.png
+  classroom:
+    heading: 教室
+    text: Phonics・Reading・Mathなど、集中して行う活動は、教室の中で椅子に座って机の上で行います。
+    image: /wp-content/uploads/2023/12/02ceb9b073b93f985e0cb08f620adfc4.png
+  playground:
+    heading: 園庭
+    text: |-
+      砂場や複合遊具を備えたプレイエリアと、かけっこやゲームなど思い切り身体を動かすことができる活動エリアがあります。
+      子どもたちが楽しみながら学び、友達との絆を深める場所となっています。
+    image: /wp-content/uploads/2023/09/アセット-69@2x-1024x915.png
+access:
+  logo: /wp-content/uploads/2023/09/stepnstones-orignal-gradient全体-1024x674.png
+  note: JR出雲市駅から徒歩5分
+documents:
+  - label: "StepN’ Stones English Preschool 概要"
+    file: /wp-content/uploads/2024/05/5d39df05bace4b15013e74386d8c385f.pdf
+  - label: 保育安全計画2025
+    file: /wp-content/uploads/2026/01/01f8fec856950f13cf6ac14842baa8e6.pdf

@@ -44,30 +44,6 @@ collections:
     editor:
       preview: false
     files:
-      - file: "_pages/about.html"
-        label: "当園について"
-        name: "about"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
-      - file: "_pages/program.html"
-        label: "プログラム"
-        name: "program"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
-      - file: "_pages/schedule.html"
-        label: "年間スケジュール"
-        name: "schedule"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/daily-schedule.html"
         label: "1日のスケジュール"
         name: "daily-schedule"
@@ -108,14 +84,6 @@ collections:
           - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
           - { label: "Permalink", name: "permalink", widget: "hidden" }
           - { label: "本文 (HTML)", name: "body", widget: "text" }
-      - file: "_pages/contact.html"
-        label: "お問い合わせ"
-        name: "contact"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
 
   # ---------------------------------------------------------------------------
   # Home page — editable images live in _data/home.yml (no HTML to break)
@@ -137,6 +105,108 @@ collections:
   - name: "page_content"
     label: "ページ内容 / Page content"
     files:
+      - file: "_data/pages/contact.yml"
+        label: "お問い合わせ / Contact"
+        name: "contact"
+        fields:
+          - { label: "案内文 / Intro text", name: "intro", widget: "text" }
+      - file: "_data/pages/program.yml"
+        label: "プログラム / Program"
+        name: "program"
+        fields:
+          - label: "項目 / Items"
+            name: "items"
+            widget: "list"
+            label_singular: "項目 / Item"
+            summary: "{{fields.number}}. {{fields.title}}"
+            fields:
+              - { label: "番号 / Number", name: "number", widget: "string" }
+              - { label: "タイトル / Title", name: "title", widget: "string" }
+              - { label: "説明 / Description", name: "text", widget: "text" }
+              - { label: "イラスト / Image", name: "image", widget: "image" }
+      - file: "_data/pages/about.yml"
+        label: "当園について / About"
+        name: "about"
+        fields:
+          - label: "ごあいさつ / Greeting"
+            name: "greeting"
+            widget: "object"
+            fields:
+              - { label: "写真 / Photo", name: "image", widget: "image" }
+              - { label: "本文1 / Text 1", name: "text1", widget: "text" }
+              - { label: "本文2 / Text 2", name: "text2", widget: "text" }
+              - { label: "署名 / Signature", name: "signature", widget: "string" }
+          - label: "教育理念 / Philosophy"
+            name: "philosophy"
+            widget: "object"
+            fields:
+              - { label: "写真1 / Image 1", name: "image1", widget: "image" }
+              - { label: "写真2 / Image 2", name: "image2", widget: "image" }
+              - { label: "本文 / Intro", name: "intro", widget: "text" }
+              - { label: "ポイント1 写真 / Point 1 image", name: "point1_image", widget: "image" }
+              - { label: "ポイント1 本文 / Point 1 text", name: "point1_text", widget: "text" }
+              - { label: "ポイント2 写真 / Point 2 image", name: "point2_image", widget: "image" }
+              - { label: "ポイント2 本文 / Point 2 text", name: "point2_text", widget: "text" }
+          - label: "施設紹介 / Facility"
+            name: "facility"
+            widget: "object"
+            fields:
+              - label: "園舎 / Building"
+                name: "building"
+                widget: "object"
+                fields:
+                  - { label: "見出し / Heading", name: "heading", widget: "string" }
+                  - { label: "本文 / Text", name: "text", widget: "text" }
+                  - { label: "写真 / Image", name: "image", widget: "image" }
+              - label: "ホール / Hall"
+                name: "hall"
+                widget: "object"
+                fields:
+                  - { label: "見出し / Heading", name: "heading", widget: "string" }
+                  - { label: "本文 / Text", name: "text", widget: "text" }
+                  - { label: "写真 / Image", name: "image", widget: "image" }
+              - label: "教室 / Classroom"
+                name: "classroom"
+                widget: "object"
+                fields:
+                  - { label: "見出し / Heading", name: "heading", widget: "string" }
+                  - { label: "本文 / Text", name: "text", widget: "text" }
+                  - { label: "写真 / Image", name: "image", widget: "image" }
+              - label: "園庭 / Playground"
+                name: "playground"
+                widget: "object"
+                fields:
+                  - { label: "見出し / Heading", name: "heading", widget: "string" }
+                  - { label: "本文 / Text", name: "text", widget: "text" }
+                  - { label: "写真 / Image", name: "image", widget: "image" }
+          - label: "アクセス / Access"
+            name: "access"
+            widget: "object"
+            fields:
+              - { label: "ロゴ / Logo", name: "logo", widget: "image" }
+              - { label: "アクセス補足 / Access note", name: "note", widget: "string" }
+          - label: "資料 / Documents"
+            name: "documents"
+            widget: "list"
+            label_singular: "資料 / Document"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "ラベル / Label", name: "label", widget: "string" }
+              - { label: "PDF", name: "file", widget: "file" }
+      - file: "_data/pages/schedule.yml"
+        label: "スケジュール / Schedule"
+        name: "schedule"
+        fields:
+          - label: "月 / Months"
+            name: "months"
+            widget: "list"
+            label_singular: "月 / Month"
+            summary: "{{fields.month}}月"
+            fields:
+              - { label: "月 / Month number", name: "month", widget: "string" }
+              - { label: "イラスト / Image", name: "image", widget: "image" }
+              - { label: "イベント / Events", name: "events", widget: "list" }
+          - { label: "注記 / Footnote", name: "footnote", widget: "string" }
       - file: "_data/pages/introduction.yml"
         label: "制服・給食 / Uniform & Lunch"
         name: "introduction_extras"
