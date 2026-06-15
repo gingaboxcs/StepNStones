@@ -44,25 +44,9 @@ collections:
     editor:
       preview: false
     files:
-      - file: "_pages/daily-schedule.html"
-        label: "1日のスケジュール"
-        name: "daily-schedule"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
       - file: "_pages/guidance.html"
         label: "入園案内"
         name: "guidance"
-        fields:
-          - { label: "ページタイトル", name: "title", widget: "string" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden" }
-          - { label: "本文 (HTML)", name: "body", widget: "text" }
-      - file: "_pages/users-voice.html"
-        label: "保護者の声"
-        name: "users-voice"
         fields:
           - { label: "ページタイトル", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
@@ -207,6 +191,49 @@ collections:
               - { label: "イラスト / Image", name: "image", widget: "image" }
               - { label: "イベント / Events", name: "events", widget: "list" }
           - { label: "注記 / Footnote", name: "footnote", widget: "string" }
+      - file: "_data/pages/daily-schedule.yml"
+        label: "1日のスケジュール / Daily schedule"
+        name: "daily_schedule"
+        fields:
+          - label: "スケジュール / Timeline"
+            name: "items"
+            widget: "list"
+            label_singular: "項目 / Item"
+            summary: "{{fields.time}} {{fields.title}}"
+            fields:
+              - { label: "時間 / Time", name: "time", widget: "string" }
+              - { label: "タイトル / Title", name: "title", widget: "string" }
+              - { label: "写真 / Photo", name: "photo", widget: "image" }
+              - { label: "アイコン / Icon", name: "icon", widget: "image" }
+      - file: "_data/pages/users-voice.yml"
+        label: "保護者の声 / Parents' voices"
+        name: "users_voice"
+        fields:
+          - label: "セクション / Sections"
+            name: "sections"
+            widget: "list"
+            label_singular: "セクション / Section"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "質問 / Question heading", name: "heading", widget: "text" }
+              - label: "コメント / Quotes"
+                name: "quotes"
+                widget: "list"
+                label_singular: "コメント / Quote"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "本文 / Text", name: "text", widget: "text" }
+                  - label: "色 / Color"
+                    name: "color"
+                    widget: "select"
+                    default: "red"
+                    options:
+                      - { label: "赤 / Red", value: "red" }
+                      - { label: "緑 / Green", value: "green" }
+                      - { label: "青 / Blue", value: "blue" }
+                      - { label: "グレー / Gray", value: "gray" }
+                      - { label: "黄 / Yellow", value: "yellow" }
+                  - { label: "アバター / Avatar (任意)", name: "avatar", widget: "image", required: false }
       - file: "_data/pages/introduction.yml"
         label: "制服・給食 / Uniform & Lunch"
         name: "introduction_extras"

@@ -1,0 +1,53 @@
+items:
+  - time: "８:30"
+    title: 開園
+    icon: /wp-content/uploads/2023/09/schedule_day04@2x.png
+    photo: /wp-content/uploads/2024/05/e462f4909cd756ed61d27429bf3650c0-1.png
+  - time: "9:00"
+    title: サークルタイム
+    icon: /wp-content/uploads/2023/09/schedule_day06@2x.png
+    photo: /wp-content/uploads/2024/05/172b70679bd083cd28cdf0807258d783-1.png
+  - time: "9:30"
+    title: レッスン1
+    icon: /wp-content/uploads/2023/09/schedule_day07@2x.png
+    photo: /wp-content/uploads/2024/05/72198b8447c4ec98bcf1533f5105f813-1.png
+  - time: "10:00"
+    title: レッスン2
+    icon: /wp-content/uploads/2023/09/schedule_day10@2x.png
+    photo: /wp-content/uploads/2024/05/50223c20a9210d0c3a395738d19acfe6-1.png
+  - time: "10:30"
+    title: レッスン3
+    icon: /wp-content/uploads/2024/05/schedule_1030.png
+    photo: /wp-content/uploads/2024/05/00c9a70aa495a62ba60fa79e722e381f-2.png
+  - time: "11:00"
+    title: レッスン4
+    icon: /wp-content/uploads/2023/09/schedule_day11@2x.png
+    photo: /wp-content/uploads/2024/05/e3f854f049076053c1b1ef51a04b6a51-1.png
+  - time: "11:30"
+    title: ランチタイム
+    icon: /wp-content/uploads/2023/09/schedule_day14@2x.png
+    photo: /wp-content/uploads/2024/05/656a50617bbec417fb343c990032149a-1.png
+  - time: "12:30"
+    title: プレイタイム
+    icon: /wp-content/uploads/2023/09/schedule_day15@2x.png
+    photo: /wp-content/uploads/2024/05/847e9e21e822a30effbf20acb7eb8b3c.png
+  - time: "13:00"
+    title: レッスン5
+    icon: /wp-content/uploads/2024/05/schedule_1300.png
+    photo: /wp-content/uploads/2024/05/beccacbde75a33d1e786641d718d21ef.png
+  - time: "13:30"
+    title: レッスン6
+    icon: /wp-content/uploads/2024/05/schedule_1330.png
+    photo: /wp-content/uploads/2024/05/2b5c923a528fab6e7eacf4b894633037.png
+  - time: "14:30"
+    title: スナックタイム
+    icon: /wp-content/uploads/2023/09/schedule_day18@2x.png
+    photo: /wp-content/uploads/2024/05/6eeefa0de1377f38c4a8f9e8772a3631.png
+  - time: "15:00"
+    title: Goodbyeタイム
+    icon: /wp-content/uploads/2023/09/schedule_day19@2x.png
+    photo: /wp-content/uploads/2024/05/d83091528d449c95ca40c29cf4abe0f2.png
+  - time: "15:00"
+    title: 預かり保育
+    icon: /wp-content/uploads/2023/09/schedule_day19@2x.png
+    photo: /wp-content/uploads/2024/05/27dafa7e2a535e815c2d6e785b32dc1c.png
