@@ -126,6 +126,19 @@ collections:
           - { label: "本文 (HTML)", name: "body", widget: "text" }
 
   # ---------------------------------------------------------------------------
+  # Home page — editable images live in _data/home.yml (no HTML to break)
+  # ---------------------------------------------------------------------------
+  - name: "home"
+    label: "ホーム / Home"
+    files:
+      - file: "_data/home.yml"
+        label: "ホーム / Home"
+        name: "home"
+        fields:
+          - { label: "メイン写真（PC）/ Main photo (desktop)", name: "main_image", widget: "image" }
+          - { label: "メイン写真（スマホ）/ Main photo (mobile)", name: "main_image_sp", widget: "image" }
+
+  # ---------------------------------------------------------------------------
   # Site-wide settings (_data/site.yml)
   # ---------------------------------------------------------------------------
   - name: "settings"
